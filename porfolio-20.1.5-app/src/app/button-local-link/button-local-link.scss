@@ -1,0 +1,25 @@
+section {
+
+    display: flex;
+    flex-flow: row wrap;
+    align-content: right;
+    justify-content: center;
+    text-size-adjust: auto;
+    gap: 2rem;
+
+    button {
+        font-size: 0.5rem;
+        font-weight: 600;
+        margin: 0.1rem;
+        border: none;
+        background-color: inherit;
+        text-align: left;
+        color: var(--text-main);
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
+
+    button:hover {
+        color: var(--accent);
+    }
+}

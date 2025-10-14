@@ -1,0 +1,8 @@
+<section id="link_buttons">
+    @for(button of buttons; track button.name){
+<button id="button_{{button.name}}" 
+        (click)="scrollTo('app-' + button.name)"
+>{{button.text}}</button>
+}
+
+</section>

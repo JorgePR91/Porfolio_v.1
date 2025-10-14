@@ -1,0 +1,37 @@
+<section id="app-contact">
+  <div class="section-title">
+    <h2>Contacte</h2>
+    <div class="title-line"></div>
+  </div>
+  <form id="contact-form" [formGroup]="formulari" (ngSubmit)="submit()">
+    <label for="nom">Nom o Entitat</label>
+    <input type="text" formControlName="nom" id="nom" />
+    <label for="correu">Correu</label>
+    <input type="email" formControlName="correu" id="correu" />
+    <label for="telefon">Telèfon</label>
+    <input type="tel" formControlName="telefon" id="telefon" />
+    <label for="missatge">Missatge</label>
+    <textarea formControlName="text" id="missatge"></textarea>
+    <!-- <button type="button" class="btn-expand" onclick="mostrarMissatge()">
+        +
+      </button>
+ -->
+    <div id="buttons">
+      <button type="submit">Enviar</button>
+      <button type="reset">Resetejar</button>
+    </div>
+  </form>
+
+  <!-- <div id="caixa-envoltori" class="envoltori hidden" onclick="ocultarMissatge()">
+    <div class="missatge" onclick="event.stopPropagation()">
+      <div class="missatgeHeader">
+        <button class="close-btn" onclick="ocultarMissatge()">-</button>
+      </div>
+      <div class="missatge" id="missatgeContingut"></div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <p>Copyright JPR</p>
+  </div> -->
+</section>
