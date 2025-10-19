@@ -20,14 +20,11 @@ section {
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            //border: 2px solid var(--accent);
+            font-size: 2.5em;
             white-space: nowrap;
             display: inline-block;
             margin-bottom: 2rem;
-            // padding-bottom: 0.3rem;
             padding-right: 2rem;
-            //position: relative;
         }
 
         .title-line {
@@ -41,20 +38,11 @@ section {
     }
 
     p {
-        //background-color: var(--card-bg);
-        //border-radius: 12px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        //box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        transition: transform 0.3s ease;
+        padding: 0.25em;
+        font-size: 1.5em;
+        //margin-bottom: 2rem;
+       // transition: transform 0.3s ease;
         width: 70%;
-        //background: var(--bg-complement);
-        //background-color: var(--bg-light);
-        //color: var(--card-bg);
-//background: radial-gradient(circle,rgba(115, 104, 79, 1) 74%, rgba(244, 241, 234, 1) 100%);
-        //box-shadow: 0 4px 10px rgba(234, 234, 234, 0.4);
-
-        //border: 3px solid black;
-        //border-radius: 60%/5%;
+        margin: auto auto 2rem auto;
     }
 }

@@ -11,18 +11,17 @@ section {
         display: flex;
         align-items: center;
         width: 100%;
+        padding: 0;
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            //border: 2px solid var(--accent);
+            font-size: 2.5em;
             white-space: nowrap;
             display: inline-block;
-            margin-bottom: 1rem;
-            // padding-bottom: 0.3rem;
+            margin-bottom: 2rem;
             padding-right: 2rem;
-            //position: relative;
         }
+
 
         .title-line {
             height: 5px;
@@ -36,28 +35,20 @@ section {
 
     .projects-container {
         width: 100%;
-        //height: 85%;
-        //justify-content: center;
-
         display: flex;
         justify-content: space-around;
         align-items: start;
-
-        // display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        // gap: 2rem;
 
         .project {
             width: 30%;
             height: fit-content;
             padding: 0.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+
             border-radius: 12px;
-            background-color: var(--bg-light);
-background: radial-gradient(circle,rgba(244, 241, 234, 1) 0%, rgba(157, 135, 82, 1) 100%);
-        box-shadow: 0 4px 10px rgba(234, 234, 234, 0.4);
-            
-//border: solid black 2px;
+            background: radial-gradient(circle, rgba(244, 241, 234, 1) 0%, rgba(157, 135, 82, 1) 100%);
+            box-shadow: 0 4px 10px rgba(234, 234, 234, 0.4);
+
             color: var(--bg-dark);
 
             display: flex;
@@ -68,9 +59,9 @@ background: radial-gradient(circle,rgba(244, 241, 234, 1) 0%, rgba(157, 135, 82,
 
             .imatge-container {
                 display: inline-block;
-                width: 80%;
-                height: 80%;
-                max-width: 100%;
+                width: 60%;
+                height: 60%;
+                max-width: 80%;
                 border-radius: 8px;
                 margin: 5%;
                 overflow: hidden;
@@ -92,10 +83,16 @@ background: radial-gradient(circle,rgba(244, 241, 234, 1) 0%, rgba(157, 135, 82,
                 transform: scale(1.03);
             }
 
+            h3 {
+                font-size: 1.2em;
+                font-variant: small-caps;
+                text-shadow: 0px 0px 1cap var(--bg-dark);
+            }
+
             p {
-                padding: 0.5rem 1rem;
+                padding: 0.75rem;
                 text-align: justify;
-                font-size: 0.5em;
+                font-size: 0.75em;
             }
 
             .etiquetes-container {
@@ -109,15 +106,14 @@ background: radial-gradient(circle,rgba(244, 241, 234, 1) 0%, rgba(157, 135, 82,
             .etiqueta {
                 min-width: 15%;
                 font-size: 0.2rem;
+                font-weight: bold;
                 padding: 0.4rem;
-                border: solid var(--bg-dark) 2px;
+                box-shadow: 0 4px 10px var(--bg-dark);
+                border: solid var(--card-bg) 1px;
                 border-radius: 8px;
                 text-decoration: none;
-                background-color: var(--accent);
-                color: var(--text-main);
+                color: var(--card-bg);
                 cursor: default;
-
-
             }
 
             .etiqueta:hover {

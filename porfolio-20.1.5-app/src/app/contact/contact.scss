@@ -2,7 +2,7 @@ section {
     //border: 2px solid white;
     background-color: var(--accent);
     border-radius: 20px;
-    padding: 2rem 3rem;
+    padding: 5%;
     height: 100vh;
     max-width: 90vw;
     margin: 0 auto;
@@ -17,15 +17,13 @@ section {
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            //border: 2px solid var(--accent);
+            font-size: 2.5em;
             white-space: nowrap;
             display: inline-block;
             margin-bottom: 2rem;
-            // padding-bottom: 0.3rem;
             padding-right: 2rem;
-            //position: relative;
         }
+
 
         .title-line {
             height: 5px;
@@ -39,14 +37,11 @@ section {
 
     #contact-form {
         text-align: left;
-        font-size: 1.2rem;
+        font-size: 1.5em;
         display: flex;
         flex-flow: column nowrap;
-
-        >* :not(button) {
-            //margin: 0.5rem;
-        }
-
+        width: 80%;
+        
         label {
             color: var(--text-main);
             text-decoration: none;
@@ -62,7 +57,6 @@ section {
             background-color: inherit;
             color: var(--bg-dark);
             font-family: "Inter", sans-serif;
-            font-size: inherit;
             resize: none;
             overflow: auto;
             line-height: 1.4;
@@ -91,7 +85,8 @@ section {
 
         }
 
-        .close-btn, .btn-expand {
+        .close-btn,
+        .btn-expand {
             width: fit-content;
             height: fit-content;
             border: 1px solid var(--accent);
@@ -135,9 +130,10 @@ section {
 
             button {
                 display: inline;
-                padding: 5px;
+                padding: 0.75em;
                 margin-left: 2em;
                 font-family: inherit;
+                font-weight: bold;
                 width: fit-content;
                 border: var(--bg-light) 2px solid;
                 border-radius: 8px;
@@ -169,105 +165,101 @@ section {
 
     }
 
-
-
-    .textarea-container {
-        position: relative;
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    textarea:focus {
+    *:focus {
         outline: none;
-        border-color: #007bff;
-        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
     }
 
-    .expand-btn {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        width: 30px;
-        height: 30px;
-        border: none;
-        border-radius: 50%;
-        background-color: #007bff;
-        color: white;
-        font-weight: bold;
-        cursor: pointer;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.2s;
-    }
+    // .textarea-container {
+    //     position: relative;
+    //     width: 100%;
+    //     max-width: 100%;
+    // }
 
-    .expand-btn:hover {
-        background-color: #0056b3;
-    }
+    // .expand-btn {
+    //     position: absolute;
+    //     bottom: 10px;
+    //     right: 10px;
+    //     width: 30px;
+    //     height: 30px;
+    //     border: none;
+    //     border-radius: 50%;
+    //     background-color: #007bff;
+    //     color: white;
+    //     font-weight: bold;
+    //     cursor: pointer;
+    //     font-size: 18px;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     transition: background-color 0.2s;
+    // }
 
-    /* Overlay y modal del texto completo */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 1000;
-    }
+    // .expand-btn:hover {
+    //     background-color: #0056b3;
+    // }
 
-    .texto-completo {
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        max-width: 80%;
-        max-height: 80%;
-        overflow: auto;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
+    // /* Overlay y modal del texto completo */
+    // .overlay {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     background-color: rgba(0, 0, 0, 0.7);
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     z-index: 1000;
+    // }
 
-    .texto-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 15px;
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-    }
+    // .texto-completo {
+    //     background: white;
+    //     padding: 20px;
+    //     border-radius: 8px;
+    //     max-width: 80%;
+    //     max-height: 80%;
+    //     overflow: auto;
+    //     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    // }
 
-    .texto-header h3 {
-        margin: 0;
-        color: #333;
-    }
+    // .texto-header {
+    //     display: flex;
+    //     justify-content: space-between;
+    //     align-items: center;
+    //     margin-bottom: 15px;
+    //     border-bottom: 1px solid #eee;
+    //     padding-bottom: 10px;
+    // }
 
-    .close-btn {
-        background: #dc3545;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        padding: 5px 10px;
-        cursor: pointer;
-        font-weight: bold;
-    }
+    // .texto-header h3 {
+    //     margin: 0;
+    //     color: #333;
+    // }
 
-    .close-btn:hover {
-        background: #c82333;
-    }
+    // .close-btn {
+    //     background: #dc3545;
+    //     color: white;
+    //     border: none;
+    //     border-radius: 4px;
+    //     padding: 5px 10px;
+    //     cursor: pointer;
+    //     font-weight: bold;
+    // }
 
-    .texto-content {
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        font-family: inherit;
-        font-size: inherit;
-        line-height: 1.5;
-    }
+    // .close-btn:hover {
+    //     background: #c82333;
+    // }
 
-    .hidden {
-        display: none;
-    }
+    // .texto-content {
+    //     white-space: pre-wrap;
+    //     word-wrap: break-word;
+    //     font-family: inherit;
+    //     font-size: inherit;
+    //     line-height: 1.5;
+    // }
+
+    // .hidden {
+    //     display: none;
+    // }
+
 }

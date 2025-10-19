@@ -1,0 +1,22 @@
+  {
+  "customSyntax": "postcss-scss",
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-scss"],
+  "ignoreFiles": [
+    "**/node_modules/**",
+    "**/dist/**"
+  ],
+  "rules": {
+    "no-duplicate-selectors": true,
+    "block-no-empty": true,
+    "selector-max-id": 0,
+    "declaration-no-important": true,
+    "color-hex-length": "short",
+    "selector-max-specificity": "0,3,0",
+    "scss/at-import-no-partial-leading-underscore": true,
+    "scss/no-duplicate-mixins": true
+  }
+}

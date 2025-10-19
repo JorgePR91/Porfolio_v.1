@@ -1,0 +1,139 @@
+header {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+#title-container {
+    width: fit-content;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 0.5rem;
+
+    h1,
+    span {
+        color: var(--accent);
+    }
+
+    h1 {
+        font-size: 5em;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    h2:first-child {
+        text-align: right;
+    }
+
+.personal-img {
+  height: 250px;
+  margin: 5% 3%;
+  object-fit: cover;
+  border-radius: 55% / 40%;
+  
+  /* Configuración para pseudo-elementos */
+  position: relative;
+  isolation: isolate;
+  
+  /* Efectos visuales */
+  background: radial-gradient(
+    circle,
+    var(--text-main) 0%,
+    var(--bg-light) 100%
+  );
+  border: 8px solid var(--bg-dark);
+  box-shadow: 0 0 40px var(--bg-light),
+    inset 0 0 60px var(--bg-light);
+  overflow: visible;
+}
+
+/* Borde exterior difuminado */
+.personal-img::before {
+  content: "";
+  position: absolute;  /* ← ESTO FALTABA */
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  //border: 2px solid var(--accent);
+  border-radius: inherit;  /* Hereda el border-radius */
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Efecto de brillo/difuminado */
+.personal-img::after {
+  content: "";
+  position: absolute;  /* ← ESTO FALTABA */
+  top: 8%;
+  left: 8%;
+  width: 15%;
+  height: 15%;
+  background: radial-gradient(
+    circle,
+    var(--bg-light) 0%,
+    transparent 70%
+  );
+  filter: blur(10px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+
+//     .personal-img {
+//         height: 250px;
+//         margin: 5% 3%;
+//         object-fit: cover;
+//         border-radius: 55% / 40%;
+//        // border: 0.5em solid rgba(138, 137, 137, 0.45);
+//         //box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+//   //  }
+
+// // .personal-img {
+//   //aspect-ratio: 1 / 1;
+//   background: radial-gradient(
+//     circle,
+//     var(--text-main) 0%,
+//     var(--bg-light) 100%
+//   );
+//   border: 8px solid var( --bg-dark);
+//   box-shadow: 0 0 40px var(--bg-light),
+//     inset 0 0 60px var(--bg-light), 0.8;
+//   overflow: visible;    
+//  isolation: isolate;
+// }
+
+// .personal-img::before {
+//   content: "";
+//   top: -15px;
+//   left: -15px;
+//   right: -15px;
+//   bottom: -15px;
+//   border: 2px solid var(--accent);
+//   opacity: 0.3;
+// }
+
+// .personal-img::after {
+//   content: "";
+//   top: 10%;
+//   left: 10%;
+//   width: 30%;
+//   height: 30%;
+//   background: radial-gradient(
+//     circle,
+//     var(--bg-light) 0%,
+//     transparent 70%
+//   );
+//   filter: blur(20px);
+//   z-index: 2;
+//   pointer-events: none;
+// }
+
+}

@@ -1,10 +1,4 @@
-section {
-    padding: 2em 3em;
-    display: flex;
-    flex-flow: wrap column;
-    justify-items: center;  
-    height: 100vh;
-    scroll-snap-align: start;
+
     
     *{
         width: fit-content;
@@ -16,4 +10,3 @@ section {
     p {
         padding-left: 1em;
     }
-}

@@ -18,7 +18,11 @@ export class ButtonUp {
 
   esVisible(): boolean {
     const buttons = document.querySelector('#link_buttons') as HTMLElement;
-    if (!buttons) return false;
+    const divBtn = document.querySelector('#div-btn-up') as HTMLElement;
+    if (!buttons){
+      divBtn.setAttribute('visibility', 'none');
+return false;
+    } 
     const posTopView = window.scrollY;
     const posButView = posTopView + window.innerHeight;
     const elemTop = buttons.offsetTop;

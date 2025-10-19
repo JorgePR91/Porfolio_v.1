@@ -1,6 +1,5 @@
 section {
-    //border: 2px solid white;
-    padding: 2rem 3rem;
+    padding: 1rem 1.5rem;
     height: 100vh;
     max-width: 90vw;
     margin: 0 auto;
@@ -15,15 +14,13 @@ section {
 
         h2 {
             font-family: 'Merriweather', serif;
-            font-size: 2rem;
-            //border: 2px solid var(--accent);
+            font-size: 2.5em;
             white-space: nowrap;
             display: inline-block;
             margin-bottom: 2rem;
-            // padding-bottom: 0.3rem;
             padding-right: 2rem;
-            //position: relative;
         }
+
 
         .title-line {
             height: 5px;
@@ -38,19 +35,22 @@ section {
     h3 {
         text-align: left;
         margin: 1.5rem 0rem;
+                font-size: 2em;
+
     }
 
     ul {
         list-style: none;
         display: grid;
-        gap: 0.8rem;
-        //border: 2px solid white;
+        gap: 0.2rem;
+        font-size: 1em;
+
 
         li::before {
             content: "✓ ";
             color: var(--accent);
             font-weight: bold;
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
         }
 
         li {
@@ -59,10 +59,10 @@ section {
         }
 
         li:hover {
+            transition: font-weight 0.8s ease-out;
             transition: transform 0.8s ease-out;
             //transform: scale(1.1);
             transform: translateX(10px);
-            transition: font-weight 0.5s ease-out;
             font-weight: bold;
         }
     }

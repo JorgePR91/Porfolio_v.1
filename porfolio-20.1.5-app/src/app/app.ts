@@ -1,4 +1,6 @@
 import { Component, signal } from '@angular/core';
+import { Nav } from "./nav/nav";
+import { Header } from "./header/header";
 import { RouterOutlet } from '@angular/router';
 import { ButtonLocalLink } from "./button-local-link/button-local-link";
 import { AboutMe } from "./about-me/about-me";
@@ -13,7 +15,7 @@ import { ButtonUp } from "./button-up/button-up";
 @Component({
   selector: 'app-root',
   //COSES QUE NECESSITEM UTILITZAR EN L'APP
-  imports: [ButtonLocalLink, AboutMe, Goals, Projects, Skills, Contact, ButtonUp, Footer],
+  imports: [Header, Nav, ButtonLocalLink, AboutMe, Goals, Projects, Skills, Contact, ButtonUp, Footer],
   //EL QUE ES REDERITZA 
   templateUrl: './app.html',
   styleUrl: './app.scss'
