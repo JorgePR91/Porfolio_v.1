@@ -24,7 +24,7 @@
               {
                 "glob": "**/*",
                 "input": "assets",
-                "output": "/assets/",
+                "output": "/assets/"
               }
             ],
             "styles": [
@@ -38,6 +38,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/Porfolio_v.1/",
               "budgets": [
                 {
                   "type": "initial",
