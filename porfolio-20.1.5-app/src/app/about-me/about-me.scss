@@ -39,10 +39,14 @@ section {
 
     p {
         padding: 0.25em;
-        font-size: 1.5em;
+        // font-size: 1em;
         //margin-bottom: 2rem;
        // transition: transform 0.3s ease;
         width: 70%;
         margin: auto auto 2rem auto;
+
+        span {
+            color: var(--accent);
+        }
     }
 }

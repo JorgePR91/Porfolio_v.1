@@ -36,6 +36,7 @@ header {
   margin: 5% 3%;
   object-fit: cover;
   border-radius: 55% / 40%;
+  z-index: 0;
   
   /* Configuración para pseudo-elementos */
   position: relative;
@@ -64,7 +65,7 @@ header {
   //border: 2px solid var(--accent);
   border-radius: inherit;  /* Hereda el border-radius */
   opacity: 0.3;
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -82,7 +83,7 @@ header {
     transparent 70%
   );
   filter: blur(10px);
-  z-index: 2;
+  z-index: 1;
   pointer-events: none;
 }
 
