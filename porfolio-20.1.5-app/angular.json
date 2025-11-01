@@ -17,14 +17,21 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": "dist/porfolio-20.1.5-app",
+			"baseHref": "/Porfolio_v.1/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "assets",
-                "output": "/assets/"
+                "input": "src/assets",
+                "output": "assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "public",
+                "output": "public/"
               }
             ],
             "styles": [
@@ -38,6 +45,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/Porfolio_v.1/",
               "budgets": [
                 {
                   "type": "initial",
