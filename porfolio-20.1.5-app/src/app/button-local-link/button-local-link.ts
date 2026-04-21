@@ -47,9 +47,9 @@ export class ButtonLocalLink {
     const elementPosition = element.getBoundingClientRect().top;
     const offsetPosition = elementPosition + window.pageYOffset;
 
-      window.scrollTo({ 
+      window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth',  // Animación suave
+        behavior: 'smooth',
       });
     }
     }
