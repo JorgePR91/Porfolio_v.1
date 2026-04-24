@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:porfolio-20.1.5-app": "node dist/porfolio-20.1.5-app/server/server.mjs"
+    "deploy": "ng deploy --base-href=/Porfolio_v.1/"
   },
   "prettier": {
     "overrides": [
@@ -21,16 +21,12 @@
   },
   "private": true,
   "dependencies": {
-    "resend": "^3.0.0",
     "@angular/common": "^20.1.0",
     "@angular/compiler": "^20.1.0",
     "@angular/core": "^20.1.0",
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
-    "@angular/platform-server": "^20.1.0",
     "@angular/router": "^20.1.0",
-    "@angular/ssr": "^20.1.5",
-    "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
@@ -38,7 +34,6 @@
     "@angular/build": "^20.1.5",
     "@angular/cli": "^20.1.5",
     "@angular/compiler-cli": "^20.1.0",
-    "@types/express": "^5.0.1",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^20.17.19",
     "angular-cli-ghpages": "^3.0.2",

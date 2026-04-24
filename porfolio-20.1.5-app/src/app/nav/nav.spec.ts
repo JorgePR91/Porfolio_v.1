@@ -1,3 +1,4 @@
+import { provideZonelessChangeDetection } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Nav } from './nav';
@@ -8,7 +9,8 @@ describe('Nav', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Nav]
+      imports: [Nav],
+      providers: [provideZonelessChangeDetection()]
     })
     .compileComponents();
 
