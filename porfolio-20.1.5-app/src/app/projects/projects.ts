@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProjectItem, ProjectService } from '../services/project-service';
 
 @Component({
   selector: 'app-projects',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './projects.scss'
 })
 export class Projects {
+  private readonly projectService = inject(ProjectService);
+  readonly projectCards: ProjectItem[] = this.projectService.getProjects();
 
 }

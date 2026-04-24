@@ -7,12 +7,11 @@ import { Skills } from './skills/skills';
 import { App } from './app';
 
 export const routes: Routes = [
-
-    { path: 'contact', component: Contact },
-    { path: 'about-me', component: AboutMe },
-    { path: 'goals', component: Goals },
-    { path: 'projects', component: Projects },
-    { path: 'skills', component: Skills },
-    { path: '', component: App }        
-    // { path: '**', component: NotFoundComponent } 
+  { path: 'contact', component: Contact },
+  { path: 'about-me', component: AboutMe },
+  { path: 'goals', component: Goals },
+  { path: 'projects', component: Projects },
+  { path: 'skills', component: Skills },
+  { path: '', component: App },
+  // { path: '**', component: NotFoundComponent }
 ];

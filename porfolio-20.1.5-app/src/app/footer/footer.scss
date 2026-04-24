@@ -1,4 +1,12 @@
 footer {
-    scroll-snap-align: end;
-    padding: 2rem;
+    //margin-top: 2.2rem;
+    padding: 1rem 0;
+   // border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+
+    p {
+        color: var(--text-muted);
+        letter-spacing: 0.04em;
+        font-size: 0.86rem;
+    }
 }
