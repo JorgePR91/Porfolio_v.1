@@ -5,9 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "node ./scripts/postbuild.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng deploy"
+    "deploy": "ng deploy",
+    "deploy:ghpages": "npx angular-cli-ghpages --dir=dist/porfolio-20.1.5-app"
   },
   "prettier": {
     "overrides": [

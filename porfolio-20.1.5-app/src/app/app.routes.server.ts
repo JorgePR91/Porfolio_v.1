@@ -1,16 +1,12 @@
-import { Routes } from '@angular/router';
-import { AboutMe } from './about-me/about-me';
-import { Contact } from './contact/contact';
-import { Goals } from './goals/goals';
-import { Projects } from './projects/projects';
-import { Skills } from './skills/skills';
-import { App } from './app';
+import { ServerRoute, RenderMode } from '@angular/ssr';
 
-export const serverRoutes: Routes = [
-  { path: 'contact', component: Contact },
-  { path: 'about-me', component: AboutMe },
-  { path: 'goals', component: Goals },
-  { path: 'projects', component: Projects },
-  { path: 'skills', component: Skills },
-  { path: '', component: App },
+// Server routes should only declare the path and renderMode.
+// Component associations remain in the client-side `app.routes.ts`.
+export const serverRoutes: ServerRoute[] = [
+  { path: 'contact', renderMode: RenderMode.Server },
+  { path: 'about-me', renderMode: RenderMode.Server },
+  { path: 'goals', renderMode: RenderMode.Server },
+  { path: 'projects', renderMode: RenderMode.Server },
+  { path: 'skills', renderMode: RenderMode.Server },
+  { path: '', renderMode: RenderMode.Server },
 ];

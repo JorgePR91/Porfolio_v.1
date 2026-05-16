@@ -18,7 +18,7 @@
           "builder": "@angular/build:application",
           "options": {
             "outputPath": "dist/porfolio-20.1.5-app",
-			"baseHref": "/Porfolio_v.1/",
+			"baseHref": "/",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -41,7 +41,7 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/Porfolio_v.1/",
+              "baseHref": "/",
               "budgets": [
                 {
                   "type": "initial",
