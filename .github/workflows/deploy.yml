@@ -28,7 +28,7 @@ jobs:
         run: |
           cd porfolio-20.1.5-app
           REPO_NAME=${GITHUB_REPOSITORY#*/}
-          npm run build -- --base-href=/$REPO_NAME/
+          ng build --configuration production --base-href=/$REPO_NAME/
         shell: bash
 
       - name: Ensure SPA 404
