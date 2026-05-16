@@ -1,80 +1,50 @@
 <section id="app-contact">
-    <div class="contact-form-div">
+  <div class="contact-form-div">
 
-  <div class="section-title">
-    <h2>Contacte</h2>
-    <div class="title-line"></div>
-  </div>
-
-  @if (msg) {
-    <div
-      [class.msg-success]="msgType === 'success'"
-      [class.msg-error]="msgType === 'error'"
-      class="msg-container"
-    >
-      {{ msg }}
-      <button type="button" (click)="msg = ''" class="close-btn">×</button>
+    <div class="section-title">
+      <h2>{{ 'contact.title' | translate }}</h2>
+      <div class="title-line"></div>
     </div>
-  }
 
-  <form id="contact-form" [formGroup]="formulari" (ngSubmit)="submit()">
-    <label for="nom">Nom o Entitat</label>
-    <input type="text" formControlName="nom" id="nom" [disabled]="isLoading" />
-    <label for="correu">Correu</label>
-    <input
-      type="email"
-      formControlName="correu"
-      id="correu"
-      [disabled]="isLoading"
-    />
-    @if (formulari.get('correu')?.invalid && formulari.get('correu')?.touched) {
-  <span class="error-msg">Email inválido</span>
-}
-    <label for="telefon">Telèfon</label>
-    <input
-      type="tel"
-      formControlName="telefon"
-      id="telefon"
-      [disabled]="isLoading"
-    />
-    <label for="missatge">Missatge</label>
-    <textarea
-      formControlName="text"
-      id="missatge"
-      [disabled]="isLoading"
-    ></textarea>
-    <!-- <button type="button" class="btn-expand" onclick="mostrarMissatge()">
-        +
-      </button>
- -->
-    <div id="buttons">
-      <button
-        type="submit"
-        [disabled]="isLoading || !formulari.valid"
-        class="btn-submit"
+    @if (msg) {
+      <div
+        [class.msg-success]="msgType === 'success'"
+        [class.msg-error]="msgType === 'error'"
+        class="msg-container"
       >
-        @if (isLoading) {
-          <span>Enviant...</span>
-        } @else {
-          <span>Enviar</span>
-        }
-      </button>
-      <button type="reset" [disabled]="isLoading" class="btn-reset">
-        Resetetjar
-      </button>
-    </div>
-  </form>
-</div>
-  <!-- <div id="caixa-envoltori" class="envoltori hidden" onclick="ocultarMissatge()">
-    <div class="missatge" onclick="event.stopPropagation()">
-      <div class="missatgeHeader">
-        <button class="close-btn" onclick="ocultarMissatge()">-</button>
+        {{ msg }}
+        <button type="button" (click)="msg = ''" class="close-btn">×</button>
       </div>
-      <div class="missatge" id="missatgeContingut"></div>
-    </div>
-  </div>
+    }
 
-  <div id="footer">
-    <p>Copyright JPR</p>
-  </div> -->
+    <form id="contact-form" [formGroup]="formulari" (ngSubmit)="submit()">
+      <label for="nom">{{ 'contact.name' | translate }}</label>
+      <input type="text" formControlName="nom" id="nom" [disabled]="isLoading" />
+
+      <label for="correu">{{ 'contact.email' | translate }}</label>
+      <input type="email" formControlName="correu" id="correu" [disabled]="isLoading" />
+      @if (formulari.get('correu')?.invalid && formulari.get('correu')?.touched) {
+        <span class="error-msg">{{ 'contact.emailInvalid' | translate }}</span>
+      }
+
+      <label for="telefon">{{ 'contact.phone' | translate }}</label>
+      <input type="tel" formControlName="telefon" id="telefon" [disabled]="isLoading" />
+
+      <label for="missatge">{{ 'contact.message' | translate }}</label>
+      <textarea formControlName="text" id="missatge" [disabled]="isLoading"></textarea>
+
+      <div id="buttons">
+        <button type="submit" [disabled]="isLoading || !formulari.valid" class="btn-submit">
+          @if (isLoading) {
+            <span>{{ 'contact.sending' | translate }}</span>
+          } @else {
+            <span>{{ 'contact.send' | translate }}</span>
+          }
+        </button>
+        <button type="reset" [disabled]="isLoading" class="btn-reset">
+          {{ 'contact.reset' | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
 </section>

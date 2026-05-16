@@ -15,13 +15,20 @@ export interface ProjectItem {
 export class ProjectService {
   private readonly projects: ProjectItem[] = [
     {
-      title: 'El Joc de la Vida',
-      description:
-        "Inicialment fet en Java per a l'assignatura de Programacio de DAW, pero migrat a Vanilla JavaScript i llancat en un servei web permanent.",
+      title: 'projects.preformTitle',
+      description: 'projects.preformDesc',
+      image: 'assets/preform-logo.png',
+      imageAlt: 'projects.preformAlt',
+      projectUrl: 'https://github.com/JorgePR91/PreForm',
+      technologies: ['Electron', 'JavaScript', 'Desktop App']
+    },
+    {
+      title: 'projects.gameOfLifeTitle',
+      description: 'projects.gameOfLifeDesc',
       image: 'assets/celula-e.jpg',
-      imageAlt: 'Imatge del Joc de la Vida',
-      projectUrl: 'https://jorgepergueillrubio.com/joc-vida',
-      technologies: ['JavaScript', 'Joc', 'Servei Web']
+      imageAlt: 'projects.gameOfLifeAlt',
+      projectUrl: 'https://jdlv-vanilla.vercel.app/',
+      technologies: ['JavaScript', 'Game', 'Web Service']
     }
   ];
 

@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  apiUrl: 'https://porfoli-backend.vercel.app'
+  // backend local para dev
+  apiUrl: 'http://localhost:3000',
 };

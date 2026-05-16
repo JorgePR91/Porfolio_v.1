@@ -8,10 +8,10 @@ header {
   width: 100%;
   padding: 1.2rem 0;
   display: grid;
-  grid-template-columns: minmax(160px, 230px) 1fr;
+  grid-template-columns: minmax(160px, 230px) 1fr auto;
   grid-template-areas:
-    'pretitle pretitle'
-    'photo copy';
+    'pretitle pretitle non'
+    'photo copy postitle';
   align-items: center;
   gap: 1.4rem 2rem;
 
@@ -36,7 +36,7 @@ header {
 
 .hero-pretitle {
   grid-area: pretitle;
-  font-size: clamp(1.05rem, 2.3vw, 1.45rem);
+  font-size: clamp(0.75rem, 1.75vw, 1rem);
   color: var(--text-muted);
 }
 
@@ -57,7 +57,13 @@ header {
   background: transparent;
   isolation: isolate;
 }
-
+.hero-postitle {
+  grid-area: postitle;
+  align-self: flex-end;
+  margin-top: 4rem;
+  font-size: calc(clamp(0.75rem, 1.75vw, 1rem) / 2);
+  color: var(--card-border);
+}
 .portrait-frame::before {
   content: '';
   position: absolute;
@@ -87,7 +93,8 @@ header {
     grid-template-areas:
       'pretitle'
       'photo'
-      'copy';
+      'copy'
+      'postitle';
     justify-items: center;
     text-align: center;
     padding: 1rem 0;

@@ -1,11 +1,12 @@
 import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, HostListener, Inject, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslatePipe } from '../i18n/translate.pipe';
 
 @Component({
   selector: 'app-button-up',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, TranslatePipe],
   templateUrl: './button-up.html',
   styleUrl: './button-up.scss'
 })
