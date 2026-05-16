@@ -1,14 +1,52 @@
 <section id="app-goals">
-    <h2>Acadèmiques</h2>
-    <h3>1r de DAW</h3>
-    <p>Cursat al IES Doctor Lluís Simarro Lacabra de Xàtiva</p>
-    <h3>Altres</h3>
-    <h5>Graduat en història</h5>
-    <p>Cursat a la Universitat de València, promoció del 2008</p>
-    <h5>Màster en Gestió Cultural</h5>
-    <p>Interuniversitari: Universitat de València i Universitat Politècnica de València, promoció del 206</p>
-    <h2>Laborals</h2>
-    <h5>Ajudant d'arxiu</h5>
-    <p>7 anys d'experiència a l'Arxiu Municipal de Xàtiva</p>
+  <div class="section-title">
+    <h2>{{ 'goals.title' | translate }}</h2>
+    <div class="title-line"></div>
+  </div>
 
+  <div class="goals-grid">
+
+    <div class="goals-group">
+      <h3 class="group-label">
+        <svg class="group-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+        </svg>
+        {{ 'goals.education' | translate }}
+      </h3>
+
+      <article class="goal-card">
+        <span class="goal-card__badge goal-card__badge--active">{{ 'goals.inProgress' | translate }}</span>
+        <strong class="goal-card__title">{{ 'goals.daw' | translate }}</strong>
+        <p class="goal-card__sub">IES Dr. Lluís Simarro Lacabra · Xàtiva</p>
+      </article>
+
+      <article class="goal-card">
+        <span class="goal-card__badge">2016</span>
+        <strong class="goal-card__title">{{ 'goals.master' | translate }}</strong>
+        <p class="goal-card__sub">Universitat de València · Universitat Politècnica de València</p>
+      </article>
+
+      <article class="goal-card">
+        <span class="goal-card__badge">2008</span>
+        <strong class="goal-card__title">{{ 'goals.history' | translate }}</strong>
+        <p class="goal-card__sub">Universitat de València</p>
+      </article>
+    </div>
+
+    <div class="goals-group">
+      <h3 class="group-label">
+        <svg class="group-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+        {{ 'goals.workExp' | translate }}
+      </h3>
+
+      <article class="goal-card">
+        <span class="goal-card__badge">{{ 'goals.years' | translate }}</span>
+        <strong class="goal-card__title">{{ 'goals.archiveAssistant' | translate }}</strong>
+        <p class="goal-card__sub">Arxiu Municipal de Xàtiva</p>
+      </article>
+    </div>
+
+  </div>
 </section>

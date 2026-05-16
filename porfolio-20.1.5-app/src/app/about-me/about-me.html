@@ -1,30 +1,9 @@
 <section id="app-about-me">
   <div class="section-title">
-    <h2>Qui sóc</h2>
+    <h2>{{ 'about.title' | translate }}</h2>
     <div class="title-line"></div>
   </div>
-  <p>
-    Sóc Jorge Perigüell Rubio, amb dièresi. Nascut a Xàtiva (València) cap a
-    l'any 1991, estic formant-me en programació web amb el grau superior en
-    Desenvolupament d’Aplicacions Web (<b>DAW</b>). Encara que la informàtica ha
-    estat present a la meua vida des de ben prompte, no ha sigut fins fa un any
-    que he decidit emprendre aquest camí de manera professional.
-  </p>
-  <p>
-    <i>¿La meua principal <span>motivació</span>?</i><br />
-    CREAR. M'apassiona descobrir com la tecnologia pot transformar idees en
-    realitats útils i accessibles. M’interessa especialment el seu potencial per
-    a millorar la vida quotidiana de les persones, fer més àgils els processos i
-    donar noves formes d’expressió i connexió. Per a mi, programar és combinar
-    creativitat i lògica per construir solucions amb impacte real.
-  </p>
-  <p>
-    <i>¿El meu <span>bagatge</span>?</i><br />
-    Sóc graduat en Història per la Universitat de València i tinc un màster en
-    Gestió Cultural. Aquesta formació m’ha aportat una visió crítica,
-    organitzativa i comunicativa que ara trasllade al món digital. Durant set
-    anys vaig treballar com a auxiliar d’arxiu a l’Arxiu Municipal de Xàtiva,
-    una experiència que em va ensenyar el valor de la informació, la importància
-    del detall i el compromís amb la preservació del coneixement.
-  </p>
+  <p [innerHTML]="'about.p1' | translate"></p>
+  <p [innerHTML]="'about.p2' | translate"></p>
+  <p [innerHTML]="'about.p3' | translate"></p>
 </section>
