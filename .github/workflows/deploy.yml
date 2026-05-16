@@ -40,7 +40,7 @@ jobs:
           npm run postbuild || true
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: porfolio-20.1.5-app/dist/porfolio-20.1.5-app/browser
 
