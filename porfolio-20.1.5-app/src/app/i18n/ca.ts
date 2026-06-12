@@ -39,6 +39,9 @@ export const ca = {
     gameOfLifeTitle: 'El Joc de la Vida',
     gameOfLifeDesc: "Inicialment fet en Java per a l'assignatura de Programació de DAW, però migrat a Vanilla JavaScript i llançat com un servei web permanent.",
     gameOfLifeAlt: 'Imatge del Joc de la Vida',
+    onboardProgramTitle: 'Onboarding-Program (skill)',
+    onboardProgramDesc: " Una skill que guía en la comprensió pas a pas d'un programa, servei o repositori, generant un recorregut pedagògic amb documentació, diagrames, checklist i scripts executables amb dades mokejades.",
+    onboardProgramAlt: "Imatge de l\'skill d\'onboarding",
   },
   skills: {
     title: 'Habilitats',

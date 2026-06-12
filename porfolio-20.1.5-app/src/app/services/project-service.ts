@@ -10,7 +10,7 @@ export interface ProjectItem {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProjectService {
   private readonly projects: ProjectItem[] = [
@@ -20,7 +20,7 @@ export class ProjectService {
       image: 'assets/preform-logo.png',
       imageAlt: 'projects.preformAlt',
       projectUrl: 'https://github.com/JorgePR91/PreForm',
-      technologies: ['Electron', 'JavaScript', 'Desktop App']
+      technologies: ['Electron', 'JavaScript', 'Desktop App'],
     },
     {
       title: 'projects.gameOfLifeTitle',
@@ -28,8 +28,16 @@ export class ProjectService {
       image: 'assets/celula-e.jpg',
       imageAlt: 'projects.gameOfLifeAlt',
       projectUrl: 'https://jdlv-vanilla.vercel.app/',
-      technologies: ['JavaScript', 'Game', 'Web Service']
-    }
+      technologies: ['JavaScript', 'Game', 'Web Service'],
+    },
+    {
+      title: 'projects.onboardProgramTitle',
+      description: 'projects.onboardProgramDesc',
+      image: 'assets/onboarding-program.png',
+      imageAlt: 'projects.onboardProgramAlt',
+      projectUrl: 'https://github.com/JorgePR91/onboard-program-skill-',
+      technologies: ['IA', 'Skill', 'Code Learning'],
+    },
   ];
 
   getProjects(): ProjectItem[] {

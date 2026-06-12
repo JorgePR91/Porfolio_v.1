@@ -40,6 +40,9 @@ export const es = {
     gameOfLifeDesc:
       'Inicialmente desarrollado en Java para la asignatura de Programación de DAW, pero migrado a Vanilla JavaScript y lanzado como un servicio web permanente.',
     gameOfLifeAlt: 'Imagen del Juego de la Vida',
+    onboardProgramTitle: 'Onboarding-Program (skill)',
+    onboardProgramDesc: " Una skill que guía en la comprensión paso a paso de un programa, servicio o repositorio, generando un recorrido pedagógico con documentación, diagramas, checklist y scripts ejecutables con datos mokeados.",
+    onboardProgramAlt: 'Imagen de la skill de onboarding',
   },
   skills: {
     title: 'Habilidades',

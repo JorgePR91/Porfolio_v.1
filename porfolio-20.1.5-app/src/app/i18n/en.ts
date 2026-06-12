@@ -40,6 +40,10 @@ export const en = {
     gameOfLifeDesc:
       'Initially built in Java for the Programming course in DAW, later migrated to Vanilla JavaScript and deployed as a permanent web service.',
     gameOfLifeAlt: "Screenshot of Conway's Game of Life",
+    onboardProgramTitle: 'Onboarding-Program (skill)',
+    onboardProgramDesc:
+      ' A skill that guides you through the step-by-step understanding of a program, service, or repository, generating a pedagogical path with documentation, diagrams, checklists, and executable scripts with mocked data.',
+    onboardProgramAlt: 'Image of the onboarding skill',
   },
   skills: {
     title: 'Skills',
