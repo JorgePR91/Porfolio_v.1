@@ -16,7 +16,7 @@
         class="lang-btn"
         [class.lang-btn--active]="langService.lang() === lang"
         (click)="use(lang)"
-      >{{ lang.toUpperCase() }}</button>
+      >{{ langLabels[lang] }}</button>
     }
   </div>
 </nav>

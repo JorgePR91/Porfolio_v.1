@@ -11,6 +11,7 @@ import { LangService, Lang } from '../i18n/lang.service';
 export class Nav {
   protected readonly langService = inject(LangService);
   readonly langs: Lang[] = ['ca', 'es', 'en'];
+  readonly langLabels: Record<Lang, string> = { ca: 'VA/CA', es: 'ES', en: 'EN' };
 
   use(lang: Lang): void {
     this.langService.use(lang);
