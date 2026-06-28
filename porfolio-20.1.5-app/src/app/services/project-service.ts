@@ -29,6 +29,14 @@ export class ProjectService {
       imageAlt: 'projects.gameOfLifeAlt',
       projectUrl: 'https://jdlv-vanilla.vercel.app/',
       technologies: ['JavaScript', 'Game', 'Web Service']
+    },
+    {
+      title: 'projects.onboardProgramTitle',
+      description: 'projects.onboardProgramDesc',
+      image: 'assets/onboarding-program.png',
+      imageAlt: 'projects.onboardProgramAlt',
+      projectUrl: 'https://github.com/JorgePR91/onboard-program-skill-',
+      technologies: ['Claude Skill', 'Documentación', 'Onboarding']
     }
   ];
 
