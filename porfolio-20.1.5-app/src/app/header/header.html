@@ -1,0 +1,25 @@
+<header id="app-header">
+  <div id="title-container">
+    <h2 class="hero-pretitle">{{ 'header.greeting' | translate }} <span>Jorge</span>,</h2>
+    <div class="portrait-frame">
+      <img
+        class="personal-img"
+        src="assets/Generated Image 01092025 - 11_45AM.jpeg"
+        [alt]="'header.imgAlt' | translate"
+        width="300"
+        height="300"
+        loading="lazy"
+      />
+    </div>
+    <div class="hero-copy">
+      <h1>{{ 'header.role' | translate }}</h1>
+      <h2>{{ 'header.subtitle' | translate }}</h2>
+    </div>
+    <div class="hero-postitle"><h3>{{ 'header.postitle' | translate }}</h3></div>
+    <div class="ornament-rule" aria-hidden="true">
+      <span class="ornament-rule__line"></span>
+      <span class="ornament-rule__glyph">❧</span>
+      <span class="ornament-rule__line"></span>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,26 @@
+<section id="app-projects">
+  <div class="section-title">
+    <h2>{{ 'projects.title' | translate }}</h2>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="projects-container">
+    @for (project of projectCards; track project.title) {
+      <article class="project">
+        <h3>{{ project.title | translate }}</h3>
+        <div class="imatge-container">
+          <a [href]="project.projectUrl" target="_blank" rel="noopener noreferrer">
+            <img [src]="project.image" [alt]="project.imageAlt | translate" width="400" height="300" loading="lazy" />
+          </a>
+        </div>
+        <p>{{ project.description | translate }}</p>
+        <div class="etiquetes-container">
+          @for (tech of project.technologies; track tech) {
+            <span class="etiqueta">{{ tech }}</span>
+          }
+        </div>
+        <a class="project-cta" [href]="project.projectUrl" target="_blank" rel="noopener noreferrer">{{ 'projects.viewProject' | translate }}</a>
+      </article>
+    }
+  </div>
+</section>

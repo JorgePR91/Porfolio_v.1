@@ -1,0 +1,35 @@
+<button id="chat-fab" (click)="open()" [attr.aria-label]="'chat.openAria' | translate">
+  {{ 'chat.open' | translate }}
+</button>
+
+@if (isOpen()) {
+  <div id="backdrop">
+    <div id="recuadro-dialogo" role="dialog" aria-modal="true"
+         [attr.aria-label]="'chat.title' | translate">
+      <button #closeBtn (click)="close()" [attr.aria-label]="'chat.close' | translate">X</button>
+
+      <div class="chat">
+        <div class="messages">
+          @for (m of messages(); track $index) {
+            <div class="msg" [class.user]="m.role === 'user'">
+              {{ m.content }}
+            </div>
+          }
+          @if (loading()) {
+            <div class="msg assistant">{{ 'chat.typing' | translate }}</div>
+          }
+        </div>
+
+        <form (submit)="send($event)">
+          <input
+            [(ngModel)]="draft"
+            name="draft"
+            [disabled]="loading()"
+            [placeholder]="'chat.placeholder' | translate"
+          />
+          <button [disabled]="loading() || !draft.trim()">{{ 'chat.send' | translate }}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+}

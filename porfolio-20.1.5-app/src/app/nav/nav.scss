@@ -1,0 +1,131 @@
+nav {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid var(--gold-soft);
+    background: transparent;
+    position: relative;
+
+    /* Segunda línea fina carmesí bajo el dorado */
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(179, 29, 34, 0.35) 30%,
+            rgba(179, 29, 34, 0.35) 70%,
+            transparent
+        );
+    }
+
+    a {
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+        height: 22px;
+        transition: transform 0.25s ease, filter 0.25s ease;
+        cursor: pointer;
+    }
+
+    .logo:hover {
+        transform: translateY(-2px);
+        filter: drop-shadow(0 0 8px rgba(201, 164, 88, 0.5));
+    }
+
+    #lang-switcher {
+        display: flex;
+        gap: 0.2rem;
+        align-items: center;
+        justify-content: end;
+    }
+
+    .lang-btn {
+        background: transparent;
+        border: 1px solid var(--gold-dim);
+        color: var(--text-muted);
+        border-radius: 4px;
+        padding: 0.2rem 0.45rem;
+        font-size: 0.72rem;
+        font-weight: 700;
+        font-family: var(--font-mono);
+        cursor: pointer;
+        letter-spacing: 0.08em;
+        transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+        &:hover {
+            background: var(--gold-dim);
+            color: var(--gold);
+            border-color: var(--gold-soft);
+        }
+
+        &.lang-btn--active {
+            background: rgba(179, 29, 34, 0.15);
+            color: var(--accent-soft);
+            border-color: rgba(179, 29, 34, 0.5);
+        }
+    }
+
+    #div-branch {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        gap: 0.35rem;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        letter-spacing: 0.03em;
+
+        img {
+            margin: 0 0.3rem;
+            cursor: auto;
+        }
+
+        img:hover {
+            transform: none;
+            filter: none;
+        }
+
+        p::first-letter {
+            font-weight: 700;
+            font-size: 1.12em;
+            color: var(--gold);
+        }
+
+        span {
+            white-space: nowrap;
+            font-weight: 700;
+            color: var(--text-main);
+            font-family: var(--font-display);
+            font-size: 1.05em;
+            letter-spacing: 0;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav #div-branch {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 760px) {
+    nav {
+        display: none;
+    }
+}
