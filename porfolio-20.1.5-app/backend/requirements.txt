@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-openai
-upstash-vector
-langchain-text-splitters
-python-dotenv
-requests
-upstash-ratelimit 
-upstash-redis
