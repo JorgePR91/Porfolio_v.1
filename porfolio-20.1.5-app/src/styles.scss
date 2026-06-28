@@ -1,16 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
   --font-body: 'Space Grotesk', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   --font-display: 'Fraunces', Georgia, serif;
-  --bg-dark: #10141a;
-  --bg-light: #f4efe5;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Base oscuro con calor de pergamino */
+  --bg-dark: #0c0e0b;
+  --bg-mid: #141710;
+  --bg-light: #f4ede0;
+
+  /* Tinta carmesí */
   --accent: #b31d22;
   --accent-soft: #de5e5b;
-  --text-main: #e7ecef;
-  --text-muted: #b6c0c7;
-  --card-bg: #151b22;
-  --card-border: rgba(255, 255, 255, 0.12);
+
+  /* Oro de manuscrito iluminado */
+  --gold: #c9a458;
+  --gold-dim: rgba(201, 164, 88, 0.16);
+  --gold-soft: rgba(201, 164, 88, 0.42);
+
+  /* Texto cálido, como tinta sobre pergamino */
+  --text-main: #e6e0d0;
+  --text-muted: #9e9278;
+  --text-code: #7ec8a0;
+
+  /* Cards */
+  --card-bg: #111410;
+  --card-border: rgba(201, 164, 88, 0.18);
   --bg-complement: #2b3440;
 }
 
@@ -32,6 +48,37 @@ body {
   line-height: 1.62;
   background: var(--bg-dark);
   min-height: 100vh;
+  position: relative;
+}
+
+/* Scanlines — el pasado analógico */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9000;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0px,
+    transparent 3px,
+    rgba(0, 0, 0, 0.055) 3px,
+    rgba(0, 0, 0, 0.055) 4px
+  );
+}
+
+/* Viñeta perimetral cálida */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 8999;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(8, 5, 2, 0.45) 100%
+  );
 }
 
 a {
@@ -62,5 +109,3 @@ button {
 #app-contact {
   scroll-margin-top: 1rem;
 }
-
-

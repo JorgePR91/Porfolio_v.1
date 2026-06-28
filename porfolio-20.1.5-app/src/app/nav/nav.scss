@@ -6,8 +6,26 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    border-bottom: 1px solid rgba(179, 29, 34, 0.45);
+    border-bottom: 1px solid var(--gold-soft);
     background: transparent;
+    position: relative;
+
+    /* Segunda línea fina carmesí bajo el dorado */
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(179, 29, 34, 0.35) 30%,
+            rgba(179, 29, 34, 0.35) 70%,
+            transparent
+        );
+    }
 
     a {
         margin: 0;
@@ -22,7 +40,7 @@ nav {
 
     .logo:hover {
         transform: translateY(-2px);
-        filter: drop-shadow(0 0 8px rgba(179, 29, 34, 0.65));
+        filter: drop-shadow(0 0 8px rgba(201, 164, 88, 0.5));
     }
 
     #lang-switcher {
@@ -34,26 +52,27 @@ nav {
 
     .lang-btn {
         background: transparent;
-        border: 1px solid rgba(179, 29, 34, 0.35);
+        border: 1px solid var(--gold-dim);
         color: var(--text-muted);
         border-radius: 4px;
         padding: 0.2rem 0.45rem;
         font-size: 0.72rem;
         font-weight: 700;
+        font-family: var(--font-mono);
         cursor: pointer;
-        letter-spacing: 0.06em;
+        letter-spacing: 0.08em;
         transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
         &:hover {
-            background: rgba(179, 29, 34, 0.12);
-            color: var(--text-main);
-            border-color: rgba(179, 29, 34, 0.6);
+            background: var(--gold-dim);
+            color: var(--gold);
+            border-color: var(--gold-soft);
         }
 
         &.lang-btn--active {
-            background: var(--accent);
-            color: #fff;
-            border-color: var(--accent);
+            background: rgba(179, 29, 34, 0.15);
+            color: var(--accent-soft);
+            border-color: rgba(179, 29, 34, 0.5);
         }
     }
 
@@ -64,6 +83,8 @@ nav {
         gap: 0.35rem;
         font-size: 0.95rem;
         color: var(--text-muted);
+        font-family: var(--font-mono);
+        letter-spacing: 0.03em;
 
         img {
             margin: 0 0.3rem;
@@ -78,13 +99,16 @@ nav {
         p::first-letter {
             font-weight: 700;
             font-size: 1.12em;
-            color: var(--accent);
+            color: var(--gold);
         }
 
         span {
             white-space: nowrap;
             font-weight: 700;
             color: var(--text-main);
+            font-family: var(--font-display);
+            font-size: 1.05em;
+            letter-spacing: 0;
         }
     }
 }

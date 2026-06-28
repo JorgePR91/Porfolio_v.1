@@ -1,41 +1,88 @@
 section {
     background: transparent;
-    border-top: 1px solid rgba(179, 29, 34, 0.35);
-    border-bottom: 1px solid rgba(179, 29, 34, 0.35);
+    border-top: 1px solid var(--gold-soft);
+    border-bottom: 1px solid var(--gold-soft);
     border-radius: 0;
     padding: 2rem 0;
     min-height: 90vh;
     margin: 0 auto;
+    position: relative;
+
+    /* Doble línea carmesí por dentro */
+    &::before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(179, 29, 34, 0.25) 30%,
+            rgba(179, 29, 34, 0.25) 70%,
+            transparent
+        );
+    }
 
     .section-title {
         display: flex;
         align-items: center;
         width: 100%;
         padding: 0;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.8rem;
 
         h2 {
             font-family: 'Fraunces', serif;
             font-size: clamp(1.7rem, 4vw, 2.3rem);
             white-space: nowrap;
             padding-right: 1.2rem;
+
+            &::before {
+                content: '§ ';
+                font-family: var(--font-mono);
+                font-size: 0.6em;
+                color: var(--gold);
+                opacity: 0.75;
+                vertical-align: middle;
+            }
         }
 
-
         .title-line {
-            height: 3px;
+            height: 4px;
             min-width: 30px;
-            background: var(--accent);
             flex-grow: 1;
-            opacity: 0.75;
+            border-top: 1px solid var(--gold-soft);
+            border-bottom: 1px solid rgba(179, 29, 34, 0.3);
+            background: transparent;
         }
     }
 
     .contact-form-div {
         padding: 3%;
-        background-color: var(--accent-dark);
-        border-radius: 20px;
-        box-shadow: 0 0 20px var(--accent-dark)
+        background: linear-gradient(
+            135deg,
+            rgba(20, 23, 16, 0.7) 0%,
+            rgba(17, 20, 13, 0.9) 100%
+        );
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(201, 164, 88, 0.06);
+        position: relative;
+
+        /* Esquina ornamental superior derecha */
+        &::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 20px;
+            height: 20px;
+            border-top: 2px solid var(--gold);
+            border-right: 2px solid var(--gold);
+            border-radius: 0 6px 0 0;
+            opacity: 0.4;
+        }
     }
 
     #contact-form {
@@ -48,69 +95,109 @@ section {
         gap: 0.15rem;
 
         label {
-            color: var(--accent);
+            color: var(--gold);
             text-decoration: none;
             font-weight: 600;
-            margin-top: 0.5rem;
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            letter-spacing: 0.06em;
+            margin-top: 0.6rem;
+            text-transform: uppercase;
         }
 
         input,
         textarea {
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            padding: 0.72rem 0.78rem;
-            margin: 0.2rem 0 0.35rem;
-            border-radius: 4px;
+            border: none;
+            border-bottom: 1px solid rgba(201, 164, 88, 0.25);
+            padding: 0.65rem 0.2rem;
+            margin: 0.15rem 0 0.45rem;
+            border-radius: 0;
             background-color: transparent;
             color: var(--text-main);
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: var(--font-body);
             resize: none;
             overflow: auto;
             line-height: 1.4;
-            transition: border-color 0.25s ease, background-color 0.25s ease;
+            transition: border-color 0.25s ease;
+
+            &::placeholder {
+                color: var(--text-muted);
+                opacity: 0.4;
+            }
         }
 
         input:focus,
         textarea:focus {
             outline: none;
-            border-color: var(--accent-soft);
-            background-color: rgba(255, 255, 255, 0.07);
+            border-bottom-color: var(--gold);
         }
 
         textarea {
             min-height: 170px;
+            border: 1px solid rgba(201, 164, 88, 0.18);
+            border-radius: 4px;
+            padding: 0.7rem 0.75rem;
+            background: rgba(201, 164, 88, 0.02);
+
+            &:focus {
+                border-color: var(--gold-soft);
+                background: rgba(201, 164, 88, 0.04);
+            }
         }
 
         #buttons {
             display: flex;
             flex-wrap: wrap;
             gap: 0.65rem;
-            padding: 0.8rem 0 0;
+            padding: 1rem 0 0;
 
             button {
-                padding: 0.7rem 1rem;
-                font-family: inherit;
-                font-weight: 700;
-                font-size: 0.95rem;
+                padding: 0.65rem 1.2rem;
+                font-family: var(--font-mono);
+                font-weight: 600;
+                font-size: 0.85rem;
+                letter-spacing: 0.06em;
                 width: fit-content;
-                border-radius: 999px;
-
+                border-radius: 4px;
                 cursor: pointer;
                 text-align: center;
-                border: 1px solid rgba(255, 255, 255, 0.18);
-                background: rgba(255, 255, 255, 0.06);
-                color: var(--text-main);
-                transition: transform 0.25s ease, border-color 0.25s ease;
+                transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
             }
 
-            button:hover {
-                transform: translateY(-1px);
-                border-color: var(--accent-soft);
+            .btn-submit {
+                background: rgba(179, 29, 34, 0.1);
+                border: 1px solid rgba(179, 29, 34, 0.4);
+                color: var(--accent-soft);
+
+                &:hover:not(:disabled) {
+                    transform: translateY(-1px);
+                    border-color: var(--accent-soft);
+                    background: rgba(179, 29, 34, 0.18);
+                    color: var(--text-main);
+                }
+
+                &:disabled {
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                }
+            }
+
+            .btn-reset {
+                background: transparent;
+                border: 1px solid var(--gold-dim);
+                color: var(--text-muted);
+
+                &:hover:not(:disabled) {
+                    transform: translateY(-1px);
+                    border-color: var(--gold-soft);
+                    color: var(--gold);
+                }
             }
         }
 
         input:disabled,
         textarea:disabled {
-            opacity: 0.6;
+            opacity: 0.5;
             cursor: not-allowed;
         }
     }
@@ -124,18 +211,19 @@ section {
         align-items: center;
         animation: slideIn 0.3s ease-in;
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 0.95rem;
+        font-family: var(--font-mono);
 
         &.msg-success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
+            background-color: rgba(126, 200, 160, 0.08);
+            color: var(--text-code);
+            border: 1px solid rgba(126, 200, 160, 0.3);
         }
 
         &.msg-error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
+            background-color: rgba(222, 94, 91, 0.08);
+            color: var(--accent-soft);
+            border: 1px solid rgba(222, 94, 91, 0.3);
         }
     }
 
@@ -149,32 +237,24 @@ section {
         padding: 0;
         margin-left: 12px;
         transition: opacity 0.2s ease;
+        font-family: var(--font-mono);
 
-        &:hover {
-            opacity: 1;
-        }
+        &:hover { opacity: 1; }
     }
 
     .error-msg {
-        color: #ffd1c4;
-        font-size: 0.85rem;
-        margin-top: 4px;
+        color: var(--accent-soft);
+        font-size: 0.78rem;
+        font-family: var(--font-mono);
+        margin-top: 2px;
         display: block;
-        margin-left: 0;
-        font-weight: 500;
+        letter-spacing: 0.03em;
     }
 
     @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(-8px); }
+        to   { opacity: 1; transform: translateY(0); }
     }
-
 }
 
 @media (max-width: 700px) {

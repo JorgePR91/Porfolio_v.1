@@ -76,4 +76,14 @@ export const ca = {
   interface: {
     buttonUp: 'Capçalera',
   },
+  chat: {
+    open: 'Parla amb mi',
+    openAria: 'Obrir el xat',
+    title: 'Xat',
+    close: 'Tancar',
+    placeholder: "Pregunta'm sobre el meu perfil…",
+    send: 'Enviar',
+    typing: 'escrivint…',
+    error: 'Ups, ara mateix no puc respondre.',
+  },
 };

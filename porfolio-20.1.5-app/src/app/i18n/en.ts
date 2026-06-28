@@ -78,4 +78,14 @@ export const en = {
   interface: {
     buttonUp: 'Header',
   },
+  chat: {
+    open: 'Chat with me',
+    openAria: 'Open chat',
+    title: 'Chat',
+    close: 'Close',
+    placeholder: 'Ask me about my profile…',
+    send: 'Send',
+    typing: 'typing…',
+    error: "Oops, I can't reply right now.",
+  },
 };

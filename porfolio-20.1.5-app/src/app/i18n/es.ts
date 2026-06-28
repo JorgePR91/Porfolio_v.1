@@ -77,4 +77,14 @@ export const es = {
   interface: {
     buttonUp: 'Cabecera',
   },
+  chat: {
+    open: 'Hablar conmigo',
+    openAria: 'Abrir chat',
+    title: 'Chat',
+    close: 'Cerrar',
+    placeholder: 'Pregúntame sobre mi perfil…',
+    send: 'Enviar',
+    typing: 'escribiendo…',
+    error: 'Ups, ahora mismo no puedo responder.',
+  },
 };

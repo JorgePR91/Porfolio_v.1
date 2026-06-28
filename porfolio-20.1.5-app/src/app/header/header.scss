@@ -11,7 +11,8 @@ header {
   grid-template-columns: minmax(160px, 230px) 1fr auto;
   grid-template-areas:
     'pretitle pretitle non'
-    'photo copy postitle';
+    'photo copy postitle'
+    'ornament ornament ornament';
   align-items: center;
   gap: 1.4rem 2rem;
 
@@ -25,6 +26,17 @@ header {
     font-size: clamp(2rem, 6vw, 4rem);
     line-height: 1;
     margin-bottom: 0.4rem;
+
+    /* Prefijo tipo terminal */
+    &::before {
+      content: '< ';
+      font-family: var(--font-mono);
+      font-size: 0.55em;
+      color: var(--text-code);
+      opacity: 0.75;
+      vertical-align: middle;
+      letter-spacing: -0.02em;
+    }
   }
 
   h2 {
@@ -38,6 +50,8 @@ header {
   grid-area: pretitle;
   font-size: clamp(0.75rem, 1.75vw, 1rem);
   color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
 }
 
 .hero-copy {
@@ -52,26 +66,39 @@ header {
   aspect-ratio: 1 / 1.18;
   border-radius: 55% / 45%;
   overflow: visible;
-  border: 1px solid rgba(179, 29, 34, 0.45);
+  border: 1px solid var(--gold-soft);
   justify-self: center;
   background: transparent;
   isolation: isolate;
+  box-shadow:
+    0 0 0 5px rgba(179, 29, 34, 0.08),
+    0 0 0 10px rgba(201, 164, 88, 0.05),
+    inset 0 0 40px rgba(0, 0, 0, 0.25);
 }
-.hero-postitle {
-  grid-area: postitle;
-  align-self: flex-end;
-  margin-top: 4rem;
-  font-size: calc(clamp(0.75rem, 1.75vw, 1rem) / 2);
-  color: var(--card-border);
-}
+
 .portrait-frame::before {
   content: '';
   position: absolute;
-  inset: -18px;
+  inset: -20px;
   border-radius: inherit;
-  background: radial-gradient(circle at 40% 38%, rgba(222, 94, 91, 0.5), rgba(222, 94, 91, 0.14) 52%, transparent 78%);
-  filter: blur(16px);
+  background: radial-gradient(
+    circle at 38% 35%,
+    rgba(201, 164, 88, 0.22),
+    rgba(222, 94, 91, 0.12) 48%,
+    transparent 72%
+  );
+  filter: blur(18px);
   z-index: -1;
+  pointer-events: none;
+}
+
+/* Esquinas ornamentales del retrato */
+.portrait-frame::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  border-radius: inherit;
+  border: 1px solid rgba(201, 164, 88, 0.15);
   pointer-events: none;
 }
 
@@ -84,7 +111,47 @@ header {
   border-radius: inherit;
   object-fit: cover;
   object-position: center 18%;
-  filter: saturate(1.05);
+  filter: saturate(0.92) sepia(0.08);
+}
+
+.hero-postitle {
+  grid-area: postitle;
+  align-self: flex-end;
+  margin-top: 4rem;
+  font-size: calc(clamp(0.75rem, 1.75vw, 1rem) / 2);
+  color: var(--card-border);
+  font-family: var(--font-mono);
+  opacity: 0.6;
+}
+
+/* Regla ornamental — separador de manuscrito */
+.ornament-rule {
+  grid-area: ornament;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-top: 0.4rem;
+  width: 100%;
+}
+
+.ornament-rule__line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-soft) 30%,
+    rgba(179, 29, 34, 0.4) 70%,
+    transparent
+  );
+}
+
+.ornament-rule__glyph {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
 }
 
 @media (max-width: 900px) {
@@ -94,7 +161,8 @@ header {
       'pretitle'
       'photo'
       'copy'
-      'postitle';
+      'postitle'
+      'ornament';
     justify-items: center;
     text-align: center;
     padding: 1rem 0;
@@ -111,5 +179,9 @@ header {
 
   .hero-copy h2 {
     font-size: clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .ornament-rule {
+    width: 80%;
   }
 }
