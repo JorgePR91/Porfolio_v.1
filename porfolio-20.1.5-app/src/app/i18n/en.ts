@@ -28,6 +28,8 @@ export const en = {
     workExp: 'Work Experience',
     years: '7 years',
     archiveAssistant: 'Archive Assistant',
+    captia: 'Full-Stack Developer Intern',
+    captiaTime: '3 months',
   },
   projects: {
     title: 'Projects',
