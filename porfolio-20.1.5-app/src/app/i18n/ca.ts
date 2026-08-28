@@ -28,6 +28,8 @@ export const ca = {
     workExp: 'Experiència Laboral',
     years: '7 anys',
     archiveAssistant: "Ajudant d'Arxiu",
+    captia: 'Programador Full-Stack en pràctiques',
+    captiaTime: '3 mesos',
   },
   projects: {
     title: 'Projectes',
