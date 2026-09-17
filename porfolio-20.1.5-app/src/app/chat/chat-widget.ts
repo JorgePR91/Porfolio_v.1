@@ -29,6 +29,7 @@ export class ChatWidgetComponent {
   private platformId = inject(PLATFORM_ID);
   private closeBtnRef = viewChild<ElementRef<HTMLButtonElement>>('closeBtn');
   private lastFocused: HTMLElement | null = null;
+  private savedScrollY = 0;
 
   isOpen = this.chatUiService.isOpen;
   messages = signal<ChatMessage[]>([]);
@@ -36,24 +37,52 @@ export class ChatWidgetComponent {
   draft = '';
 
   constructor() {
-    effect(() => {
+    effect((onCleanup) => {
       const open = this.isOpen();
       const closeBtn = this.closeBtnRef();
 
       if (!isPlatformBrowser(this.platformId)) return;
+
+      // Bloquear el overflow desactiva el scroll-snap de <html>, y la página
+      // salta a su desplazamiento sin ajustar: hay que guardar y restaurar.
+      if (open) this.savedScrollY = window.scrollY;
+      // html + body: iOS Safari ignora el bloqueo si sólo se pone en uno.
       document.documentElement.style.overflow = open ? 'hidden' : '';
+      document.body.style.overflow = open ? 'hidden' : '';
+      if (open) window.scrollTo(0, this.savedScrollY);
 
       if (open) {
         if (!this.lastFocused) {
           this.lastFocused = document.activeElement as HTMLElement | null;
         }
         closeBtn?.nativeElement.focus();
+
+        // El teclado virtual encoge el viewport visual, no el de layout: sin
+        // esto el campo de texto acaba detrás del teclado en iOS/Android.
+        const vv = window.visualViewport;
+        if (vv) {
+          this.syncViewportHeight();
+          vv.addEventListener('resize', this.syncViewportHeight);
+          vv.addEventListener('scroll', this.syncViewportHeight);
+          onCleanup(() => {
+            vv.removeEventListener('resize', this.syncViewportHeight);
+            vv.removeEventListener('scroll', this.syncViewportHeight);
+            document.documentElement.style.removeProperty('--chat-vh');
+          });
+        }
       } else {
-        this.lastFocused?.focus();
+        this.lastFocused?.focus({ preventScroll: true });
         this.lastFocused = null;
+        window.scrollTo(0, this.savedScrollY);
       }
     });
   }
+
+  private syncViewportHeight = () => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    document.documentElement.style.setProperty('--chat-vh', `${vv.height}px`);
+  };
 
   @HostListener('document:keydown.escape')
   onEscape() {

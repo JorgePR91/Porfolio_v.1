@@ -39,7 +39,13 @@
 #backdrop {
   position: fixed;
   inset: 0;
+  /* 100dvh sigue a la barra de URL del navegador móvil; vh no lo hace.
+     --chat-vh lo afina con el teclado abierto (lo fija el componente). */
+  height: 100vh;
+  height: 100dvh;
+  height: var(--chat-vh, 100dvh);
   background: rgba(8, 5, 2, 0.66);
+  overscroll-behavior: contain;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   z-index: 9500;
@@ -120,6 +126,8 @@
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
   gap: 0.55rem;
@@ -199,9 +207,22 @@ form > button:disabled {
 
 /* ---- Móvil: pantalla completa (decisión D1) ---- */
 @media (max-width: 900px) {
+  /* El disparador sigue siendo flotante, pero baja a la esquina inferior
+     izquierda: arriba estorba a la cabecera y abajo-derecha ya lo ocupa
+     #div-btn-up. Así el chat es alcanzable desde cualquier punto del scroll. */
   #chat-fab {
-    display: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: auto;
+    right: auto;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    left: calc(18px + env(safe-area-inset-left, 0px));
+    min-height: 44px;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.875rem;
   }
+
   #backdrop {
     padding: 0;
   }
@@ -210,8 +231,64 @@ form > button:disabled {
     height: 100%;
     max-height: 100%;
     border-radius: 0;
+    /* Respeta la muesca y la barra inferior de iOS. */
+    padding: calc(1rem + env(safe-area-inset-top, 0px))
+      calc(1rem + env(safe-area-inset-right, 0px))
+      calc(1rem + env(safe-area-inset-bottom, 0px))
+      calc(1rem + env(safe-area-inset-left, 0px));
   }
   #recuadro-dialogo::after {
     display: none;
+  }
+
+  /* Objetivo táctil de 44px para la X. */
+  #recuadro-dialogo > button[aria-label] {
+    top: calc(0.25rem + env(safe-area-inset-top, 0px));
+    right: calc(0.25rem + env(safe-area-inset-right, 0px));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    font-size: 1.25rem;
+  }
+
+  .messages {
+    padding-top: 2.75rem;
+  }
+  .msg {
+    max-width: 92%;
+  }
+
+  /* 16px es el mínimo que evita que iOS haga zoom al enfocar el campo. */
+  input {
+    font-size: 16px;
+  }
+  form > button {
+    min-height: 44px;
+    white-space: nowrap;
+  }
+}
+
+/* Pantallas muy estrechas: aprieta el disparador para que no roce a #div-btn-up. */
+@media (max-width: 400px) {
+  #chat-fab {
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    left: calc(12px + env(safe-area-inset-left, 0px));
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #chat-fab,
+  form > button {
+    transition: none;
+  }
+  #chat-fab:hover,
+  form > button:hover:not(:disabled) {
+    transform: none;
   }
 }
