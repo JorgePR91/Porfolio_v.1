@@ -1,6 +1,8 @@
 <header id="app-header">
   <div id="title-container">
-    <h2 class="hero-pretitle">{{ 'header.greeting' | translate }} <span>Jorge</span>,</h2>
+    <h2 class="hero-pretitle">
+      {{ "header.greeting" | translate }} <span>Jorge Perigüell</span>,
+    </h2>
     <div class="portrait-frame">
       <img
         class="personal-img"
@@ -12,14 +14,22 @@
       />
     </div>
     <div class="hero-copy">
-      <h1>{{ 'header.role' | translate }}</h1>
-      <h2>{{ 'header.subtitle' | translate }}</h2>
+      <h1 class="hero-phrase">{{ "header.subtitle" | translate }}</h1>
+      <p class="hero-role">
+        <span>{{ "header.roleMain" | translate }}</span>
+        <span>{{ "header.roleFocus" | translate }}</span>
+      </p>
     </div>
-    <div class="hero-postitle"><h3>{{ 'header.postitle' | translate }}</h3></div>
+    <!-- <div class="hero-postitle"><h3>{{ 'header.postitle' | translate }}</h3></div> -->
     <div class="ornament-rule" aria-hidden="true">
       <span class="ornament-rule__line"></span>
       <span class="ornament-rule__glyph">❧</span>
       <span class="ornament-rule__line"></span>
     </div>
+    <ul class="hero-stack" [attr.aria-label]="'skills.techStack' | translate">
+      @for (tech of stack; track tech) {
+        <li>{{ tech }}</li>
+      }
+    </ul>
   </div>
 </header>

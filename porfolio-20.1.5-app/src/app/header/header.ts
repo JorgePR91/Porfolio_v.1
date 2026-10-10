@@ -7,4 +7,6 @@ import { TranslatePipe } from '../i18n/translate.pipe';
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
-export class Header {}
+export class Header {
+  readonly stack = ['Java', 'Spring Boot', 'Python', 'FastAPI', 'Docker', 'PostgreSQL', 'Angular'];
+}
