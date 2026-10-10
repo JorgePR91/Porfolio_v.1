@@ -14,9 +14,9 @@ export const es = {
   },
   about: {
     title: 'Quién soy',
-    p1: 'Soy Jorge Perigüell Rubio, con diéresis. Nacido en Xàtiva (Valencia) hacia el año 1991, formando en programación web con el grado superior en Desarrollo de Aplicaciones Web (<b>DAW</b>). Aunque la informática ha estado presente en mi vida desde bien pronto, no ha sido hasta hace un año que he decidido emprender este camino de manera profesional.',
+    p1: 'Soy Jorge Perigüell Rubio, con diéresis, de Xàtiva (Valencia). Me estoy especializando en backend e IA aplicada, y aporto algo poco habitual en un programador: casi ocho años como gestor documental. Sé qué metadatos importan, qué errores son graves y cuándo una salida del modelo no es fiable.',
     p2: '<i>¿Mi principal <span>motivación</span>?</i><br />CREAR. Me apasiona descubrir cómo la tecnología puede transformar ideas en realidades útiles y accesibles. Me interesa especialmente su potencial para mejorar la vida cotidiana de las personas, hacer más ágiles los procesos y dar nuevas formas de expresión y conexión. Para mí, programar es combinar creatividad y lógica para construir soluciones con impacto real.',
-    p3: '<i>¿Mi <span>bagaje</span>?</i><br />Soy graduado en Historia por la Universidad de Valencia y tengo un máster en Gestión Cultural. Esta formación me ha aportado una visión crítica, organizativa y comunicativa que ahora traslado al mundo digital. Durante siete años trabajé como auxiliar de archivo en el Archivo Municipal de Xàtiva (trabajando para Solventa S.L.), una experiencia que me enseñó el valor de la información, la importancia del detalle y el compromiso con la preservación del conocimiento.',
+    p3: '<i>¿Mi <span>bagaje</span>?</i><br />Soy graduado en Historia por la Universitat de València y tengo un máster en Gestión Cultural. Durante casi ocho años trabajé como auxiliar de archivo en el Arxiu Municipal de Xàtiva, a través de Solventa SL: catalogación con ISAD(G), digitalización, tratamiento de documentación histórica y tramitación administrativa. Esa experiencia es la base con la que hoy evalúo lo que la IA extrae de un documento.',
   },
   goals: {
     title: 'Formación y Trayectoria',

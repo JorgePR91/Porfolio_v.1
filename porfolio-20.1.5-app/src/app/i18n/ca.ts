@@ -15,9 +15,9 @@ export const ca = {
   },
   about: {
     title: 'Qui sóc',
-    p1: "Sóc Jorge Perigüell Rubio, amb dièresi. Nascut a Xàtiva (València) cap a l'any 1991, estic formant-me en programació web amb el grau superior en Desenvolupament d'Aplicacions Web (<b>DAW</b>). Encara que la informàtica ha estat present a la meua vida des de ben prompte, no ha sigut fins fa un any que he decidit emprendre aquest camí de manera professional.",
+    p1: "Sóc Jorge Perigüell Rubio, amb dièresi, de Xàtiva (València). M'estic especialitzant en backend i IA aplicada, i aporte una cosa poc habitual en un programador: quasi huit anys com a gestor documental. Sé quines metadades importen, quins errors són greus i quan una eixida del model no és fiable.",
     p2: "<i>¿La meua principal <span>motivació</span>?</i><br />CREAR. M'apassiona descobrir com la tecnologia pot transformar idees en realitats útils i accessibles. M'interessa especialment el seu potencial per a millorar la vida quotidiana de les persones, fer més àgils els processos i donar noves formes d'expressió i connexió. Per a mi, programar és combinar creativitat i lògica per construir solucions amb impacte real.",
-    p3: "<i>¿El meu <span>bagatge</span>?</i><br />Sóc graduat en Història per la Universitat de València i tinc un màster en Gestió Cultural. Aquesta formació m'ha aportat una visió crítica, organitzativa i comunicativa que ara trasllade al món digital. Durant set anys vaig treballar com a auxiliar d'arxiu a l'Arxiu Municipal de Xàtiva (treballant per a Solventa S.L.), una experiència que em va ensenyar el valor de la informació, la importància del detall i el compromís amb la preservació del coneixement.",
+    p3: "<i>¿El meu <span>bagatge</span>?</i><br />Sóc graduat en Història per la Universitat de València i tinc un màster en Gestió Cultural. Durant quasi huit anys vaig treballar com a auxiliar d'arxiu a l'Arxiu Municipal de Xàtiva, a través de Solventa SL: catalogació amb ISAD(G), digitalització, tractament de documentació històrica i tramitació administrativa. Eixa experiència és la base amb què hui avalue el que la IA extrau d'un document.",
   },
   goals: {
     title: 'Formació i Trajectòria',
