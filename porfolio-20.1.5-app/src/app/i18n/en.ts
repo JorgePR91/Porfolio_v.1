@@ -16,7 +16,7 @@ export const en = {
     title: 'Who I am',
     p1: "I'm Jorge Perigüell Rubio — yes, with the umlaut. Born in Xàtiva (Valencia) around 1991, I'm training in web development with a Higher Technician degree in Web Application Development (<b>DAW</b>). Although technology has been part of my life since early on, it wasn't until a year ago that I decided to pursue this path professionally.",
     p2: "<i>My main <span>motivation</span>?</i><br />CREATING. I'm passionate about discovering how technology can turn ideas into useful, accessible realities. I'm especially drawn to its potential for improving people's daily lives, streamlining processes, and opening new forms of expression and connection. For me, programming is the art of combining creativity and logic to build solutions with real impact.",
-    p3: "<i>My <span>background</span>?</i><br />I hold a degree in History from the University of Valencia and a Master's in Cultural Management. This background gave me a critical, organizational, and communicative mindset that I now bring to the digital world. For seven years I worked as an archive assistant at the Municipal Archive of Xàtiva — an experience that taught me the value of information, the importance of detail, and a commitment to preserving knowledge.",
+    p3: "<i>My <span>background</span>?</i><br />I hold a degree in History from the University of Valencia and a Master's in Cultural Management. This background gave me a critical, organizational, and communicative mindset that I now bring to the digital world. For seven years I worked as an archive assistant at the Municipal Archive of Xàtiva (working for Solventa S.L.) — an experience that taught me the value of information, the importance of detail, and a commitment to preserving knowledge.",
   },
   goals: {
     title: 'Education & Career',
@@ -28,7 +28,7 @@ export const en = {
     workExp: 'Work Experience',
     years: '7 years',
     archiveAssistant: 'Archive Assistant',
-    captia: 'Full-Stack Developer Intern',
+    captia: 'Full-Stack Developer',
     captiaTime: '3 months',
   },
   projects: {

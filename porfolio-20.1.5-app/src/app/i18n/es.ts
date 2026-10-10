@@ -16,7 +16,7 @@ export const es = {
     title: 'Quién soy',
     p1: 'Soy Jorge Perigüell Rubio, con diéresis. Nacido en Xàtiva (Valencia) hacia el año 1991, me estoy formando en programación web con el grado superior en Desarrollo de Aplicaciones Web (<b>DAW</b>). Aunque la informática ha estado presente en mi vida desde bien pronto, no ha sido hasta hace un año que he decidido emprender este camino de manera profesional.',
     p2: '<i>¿Mi principal <span>motivación</span>?</i><br />CREAR. Me apasiona descubrir cómo la tecnología puede transformar ideas en realidades útiles y accesibles. Me interesa especialmente su potencial para mejorar la vida cotidiana de las personas, hacer más ágiles los procesos y dar nuevas formas de expresión y conexión. Para mí, programar es combinar creatividad y lógica para construir soluciones con impacto real.',
-    p3: '<i>¿Mi <span>bagaje</span>?</i><br />Soy graduado en Historia por la Universidad de Valencia y tengo un máster en Gestión Cultural. Esta formación me ha aportado una visión crítica, organizativa y comunicativa que ahora traslado al mundo digital. Durante siete años trabajé como auxiliar de archivo en el Archivo Municipal de Xàtiva, una experiencia que me enseñó el valor de la información, la importancia del detalle y el compromiso con la preservación del conocimiento.',
+    p3: '<i>¿Mi <span>bagaje</span>?</i><br />Soy graduado en Historia por la Universidad de Valencia y tengo un máster en Gestión Cultural. Esta formación me ha aportado una visión crítica, organizativa y comunicativa que ahora traslado al mundo digital. Durante siete años trabajé como auxiliar de archivo en el Archivo Municipal de Xàtiva (trabajando para Solventa S.L.), una experiencia que me enseñó el valor de la información, la importancia del detalle y el compromiso con la preservación del conocimiento.',
   },
   goals: {
     title: 'Formación y Trayectoria',
@@ -28,7 +28,7 @@ export const es = {
     workExp: 'Experiencia Laboral',
     years: '7 años',
     archiveAssistant: 'Auxiliar de Archivo',
-    captia: 'Programador Full-Stack en prácticas',
+    captia: 'Programador Full-Stack',
     captiaTime: '3 meses',
   },
   projects: {
