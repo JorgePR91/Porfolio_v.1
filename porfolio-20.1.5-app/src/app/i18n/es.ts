@@ -47,6 +47,11 @@ export const es = {
     onboardProgramDesc:
       ' Una skill que guía en la comprensión paso a paso de un programa, servicio o repositorio, generando un recorrido pedagógico con documentación, diagramas, checklist y scripts ejecutables con datos mokeados.',
     onboardProgramAlt: 'Imagen de la skill de onboarding',
+    ragTitle: 'Portfolio Contact & Chatbot',
+    ragTagline: 'Un chatbot que responde sobre mí en 3 idiomas y no se inventa nada',
+    ragDesc: 'Servicio de contacto por email y chatbot que responde sobre mi perfil. Actualmente se encuentra en producción en esta misma web. Consta de un guardrail que filtra abusos y prompt injection, un evaluador que revisa la respuesta y un umbral de similitud que descarta contexto irrelevante.',
+    ragAlt: 'Imagen de un CV con boca y hablando',
+    tryIt: 'Pruébalo ahora',
   },
   skills: {
     title: 'Habilidades',

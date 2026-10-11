@@ -48,6 +48,12 @@ export const en = {
     onboardProgramDesc:
       ' A skill that guides you through the step-by-step understanding of a program, service, or repository, generating a pedagogical path with documentation, diagrams, checklists, and executable scripts with mocked data.',
     onboardProgramAlt: 'Image of the onboarding skill',
+    ragTitle: 'Portfolio Contact & Chatbot',
+    ragTagline: 'A chatbot that answers questions about me in 3 languages and never makes things up',
+    ragDesc:
+      "Email contact service and a chatbot that answers questions about my profile. It's live in production on this very site. It includes a guardrail that blocks abuse and prompt injection, an evaluator that reviews each answer, and a similarity threshold that discards irrelevant context.",
+    ragAlt: 'Image of a talking CV with a mouth',
+    tryIt: 'Try it now',
   },
   skills: {
     title: 'Skills',

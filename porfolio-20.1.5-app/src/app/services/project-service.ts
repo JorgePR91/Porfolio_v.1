@@ -7,6 +7,8 @@ export interface ProjectItem {
   imageAlt: string;
   projectUrl: string;
   technologies: string[];
+  featured?: boolean;
+  tagline?: string;
 }
 
 @Injectable({
@@ -15,12 +17,22 @@ export interface ProjectItem {
 export class ProjectService {
   private readonly projects: ProjectItem[] = [
     {
+      title: 'projects.ragTitle',
+      description: 'projects.ragDesc',
+      image: 'assets/rag-chatbot-logo.webp',
+      imageAlt: 'projects.ragAlt',
+      projectUrl: 'https://github.com/JorgePR91/portfolio-rag-chatbot',
+      technologies: ['Python', 'FastAPI', 'RAG', 'OpenAI', 'Upstash'],
+      featured: true,
+      tagline: 'projects.ragTagline'
+    },
+    {
       title: 'projects.preformTitle',
       description: 'projects.preformDesc',
       image: 'assets/preform-logo.png',
       imageAlt: 'projects.preformAlt',
       projectUrl: 'https://github.com/JorgePR91/PreForm',
-      technologies: ['Electron', 'JavaScript', 'Desktop App']
+      technologies: ['Electron', 'JavaScript', 'Desktop App'],   
     },
     {
       title: 'projects.gameOfLifeTitle',
@@ -28,7 +40,7 @@ export class ProjectService {
       image: 'assets/celula-e.jpg',
       imageAlt: 'projects.gameOfLifeAlt',
       projectUrl: 'https://jdlv-vanilla.vercel.app/',
-      technologies: ['JavaScript', 'Game', 'Web Service']
+      technologies: ['JavaScript', 'Game', 'Web Service'],
     },
     {
       title: 'projects.onboardProgramTitle',
@@ -36,7 +48,7 @@ export class ProjectService {
       image: 'assets/onboarding-program.png',
       imageAlt: 'projects.onboardProgramAlt',
       projectUrl: 'https://github.com/JorgePR91/onboard-program-skill-',
-      technologies: ['Claude Skill', 'Documentación', 'Onboarding']
+      technologies: ['Claude Skill', 'Documentación', 'Onboarding'],
     }
   ];
 

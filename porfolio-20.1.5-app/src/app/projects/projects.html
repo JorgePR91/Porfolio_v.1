@@ -1,16 +1,63 @@
 <section id="app-projects">
   <div class="section-title">
-    <h2>{{ 'projects.title' | translate }}</h2>
+    <h2>{{ "projects.title" | translate }}</h2>
     <div class="title-line"></div>
   </div>
-
+  @if (featured; as f) {
+    <article class="project project--featured">
+      <div class="imatge-container">
+        <a [href]="f.projectUrl" target="_blank" rel="noopener noreferrer">
+          <img
+            [src]="f.image"
+            [alt]="f.imageAlt | translate"
+            width="400"
+            height="300"
+          />
+        </a>
+      </div>
+      <div class="featured-body">
+        <h3>{{ f.title | translate }}</h3>
+        @if (f.tagline) {
+          <p class="featured-tagline">{{ f.tagline | translate }}</p>
+        }
+        <p>{{ f.description | translate }}</p>
+        <div class="etiquetes-container">
+          @for (tech of f.technologies; track tech) {
+            <span class="etiqueta">{{ tech }}</span>
+          }
+        </div>
+        <div class="featured-actions">
+          <button type="button" class="project-cta" (click)="openChat()">
+            {{ "projects.tryIt" | translate }}
+          </button>
+          <a
+            class="project-cta"
+            [href]="f.projectUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ "projects.viewProject" | translate }}</a
+          >
+        </div>
+      </div>
+    </article>
+  }
   <div class="projects-container">
-    @for (project of projectCards; track project.title) {
+    @for (project of others; track project.title) {
       <article class="project">
         <h3>{{ project.title | translate }}</h3>
         <div class="imatge-container">
-          <a [href]="project.projectUrl" target="_blank" rel="noopener noreferrer">
-            <img [src]="project.image" [alt]="project.imageAlt | translate" width="400" height="300" loading="lazy" />
+          <a
+            [href]="project.projectUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              [src]="project.image"
+              [alt]="project.imageAlt | translate"
+              width="400"
+              height="300"
+              loading="lazy"
+            />
           </a>
         </div>
         <p>{{ project.description | translate }}</p>
@@ -19,7 +66,13 @@
             <span class="etiqueta">{{ tech }}</span>
           }
         </div>
-        <a class="project-cta" [href]="project.projectUrl" target="_blank" rel="noopener noreferrer">{{ 'projects.viewProject' | translate }}</a>
+        <a
+          class="project-cta"
+          [href]="project.projectUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          >{{ "projects.viewProject" | translate }}</a
+        >
       </article>
     }
   </div>
