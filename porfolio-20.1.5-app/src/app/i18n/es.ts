@@ -15,8 +15,10 @@ export const es = {
   about: {
     title: 'Quién soy',
     p1: 'Soy Jorge Perigüell Rubio, con diéresis, de Xàtiva (Valencia). Me estoy especializando en backend e IA aplicada, y aporto algo poco habitual en un programador: casi ocho años como gestor documental. Sé qué metadatos importan, qué errores son graves y cuándo una salida del modelo no es fiable.',
-    p2: '<i>¿Mi principal <span>motivación</span>?</i><br />CREAR. Me apasiona descubrir cómo la tecnología puede transformar ideas en realidades útiles y accesibles. Me interesa especialmente su potencial para mejorar la vida cotidiana de las personas, hacer más ágiles los procesos y dar nuevas formas de expresión y conexión. Para mí, programar es combinar creatividad y lógica para construir soluciones con impacto real.',
-    p3: '<i>¿Mi <span>bagaje</span>?</i><br />Soy graduado en Historia por la Universitat de València y tengo un máster en Gestión Cultural. Durante casi ocho años trabajé como auxiliar de archivo en el Arxiu Municipal de Xàtiva, a través de Solventa SL: catalogación con ISAD(G), digitalización, tratamiento de documentación histórica y tramitación administrativa. Esa experiencia es la base con la que hoy evalúo lo que la IA extrae de un documento.',
+    p2Title:'<i>¿Mi principal <span>motivación</span>?</i><br />',
+    p2: 'CREAR. Me apasiona descubrir cómo la tecnología puede transformar ideas en realidades útiles y accesibles. Me interesa especialmente su potencial para mejorar la vida cotidiana de las personas, hacer más ágiles los procesos y dar nuevas formas de expresión y conexión. Para mí, programar es combinar creatividad y lógica para construir soluciones con impacto real.',
+    p3Title: '<i>¿Mi <span>bagaje</span>?</i><br />',
+    p3: 'Soy graduado en Historia por la Universitat de València y tengo un máster en Gestión Cultural. Durante casi ocho años trabajé como auxiliar de archivo en el Arxiu Municipal de Xàtiva, a través de Solventa SL: catalogación con ISAD(G), digitalización, tratamiento de documentación histórica y tramitación administrativa. Esa experiencia es la base con la que hoy evalúo lo que la IA extrae de un documento.',
   },
   goals: {
     title: 'Formación y Trayectoria',

@@ -16,8 +16,10 @@ export const en = {
   about: {
     title: 'Who I am',
     p1: "I'm Jorge Perigüell Rubio — yes, with the umlaut — from Xàtiva (Valencia). I'm specializing in backend and applied AI, and I bring something unusual for a developer: almost eight years as a records manager. I know which metadata matter, which errors are serious, and when a model's output can't be trusted.",
-    p2: "<i>My main <span>motivation</span>?</i><br />CREATING. I'm passionate about discovering how technology can turn ideas into useful, accessible realities. I'm especially drawn to its potential for improving people's daily lives, streamlining processes, and opening new forms of expression and connection. For me, programming is the art of combining creativity and logic to build solutions with real impact.",
-    p3: "<i>My <span>background</span>?</i><br />I hold a degree in History from the Universitat de València and a Master's in Cultural Management. For almost eight years I worked as an archive assistant at the Arxiu Municipal de Xàtiva (Xàtiva Municipal Archive) through Solventa SL: cataloguing with ISAD(G), digitization, processing historical records, and handling administrative procedures. That experience is the foundation I now use to evaluate what AI extracts from a document.",
+    p2Title: "<i>My main <span>motivation</span>?</i><br />",
+    p2: "CREATING. I'm passionate about discovering how technology can turn ideas into useful, accessible realities. I'm especially drawn to its potential for improving people's daily lives, streamlining processes, and opening new forms of expression and connection. For me, programming is the art of combining creativity and logic to build solutions with real impact.",
+    p3Title: "<i>My <span>background</span>?</i><br />",
+    p3: "I hold a degree in History from the Universitat de València and a Master's in Cultural Management. For almost eight years I worked as an archive assistant at the Arxiu Municipal de Xàtiva (Xàtiva Municipal Archive) through Solventa SL: cataloguing with ISAD(G), digitization, processing historical records, and handling administrative procedures. That experience is the foundation I now use to evaluate what AI extracts from a document.",
   },
   goals: {
     title: 'Education & Career',
