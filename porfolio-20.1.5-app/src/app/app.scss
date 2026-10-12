@@ -6,14 +6,6 @@
   display: flex;
   flex-direction: column;
   gap: clamp(1.2rem, 2.8vw, 2.4rem);
-  /* Línea guía vertical sutil — como papel pautado de archivo */
-  background-image: linear-gradient(
-    90deg,
-    transparent calc(1.25rem - 1px),
-    rgba(201, 164, 88, 0.03) calc(1.25rem - 1px),
-    rgba(201, 164, 88, 0.03) calc(1.25rem + 0px),
-    transparent calc(1.25rem + 0px)
-  );
 }
 
 #content > * {
