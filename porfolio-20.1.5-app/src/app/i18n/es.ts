@@ -97,6 +97,7 @@ export const es = {
     buttonUp: 'Cabecera',
   },
   chat: {
+    welcome: '¡Hola! Soy una IA especializada en Jorge: respondo con la información de su perfil. Pregúntame sobre mi formación, experiencia, habilidades o proyectos.',
     open: 'Hablar conmigo',
     openAria: 'Abrir chat',
     title: 'Chat',

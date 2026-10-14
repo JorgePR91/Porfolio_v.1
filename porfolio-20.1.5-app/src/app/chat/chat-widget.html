@@ -1,22 +1,38 @@
-<button id="chat-fab" (click)="open()" [attr.aria-label]="'chat.openAria' | translate">
-  {{ 'chat.open' | translate }}
+<button
+  id="chat-fab"
+  (click)="open()"
+  [attr.aria-label]="'chat.openAria' | translate"
+>
+  {{ "chat.open" | translate }}
 </button>
 
 @if (isOpen()) {
   <div id="backdrop">
-    <div id="recuadro-dialogo" role="dialog" aria-modal="true"
-         [attr.aria-label]="'chat.title' | translate">
-      <button #closeBtn (click)="close()" [attr.aria-label]="'chat.close' | translate">X</button>
+    <div
+      id="recuadro-dialogo"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="'chat.title' | translate"
+    >
+      <button
+        #closeBtn
+        (click)="close()"
+        [attr.aria-label]="'chat.close' | translate"
+      >
+        X
+      </button>
 
       <div class="chat">
         <div class="messages">
+          <div class="msg assistant">{{ "chat.welcome" | translate }}</div>
+
           @for (m of messages(); track $index) {
             <div class="msg" [class.user]="m.role === 'user'">
               {{ m.content }}
             </div>
           }
           @if (loading()) {
-            <div class="msg assistant">{{ 'chat.typing' | translate }}</div>
+            <div class="msg assistant">{{ "chat.typing" | translate }}</div>
           }
         </div>
 
@@ -27,7 +43,9 @@
             [disabled]="loading()"
             [placeholder]="'chat.placeholder' | translate"
           />
-          <button [disabled]="loading() || !draft.trim()">{{ 'chat.send' | translate }}</button>
+          <button [disabled]="loading() || !draft.trim()">
+            {{ "chat.send" | translate }}
+          </button>
         </form>
       </div>
     </div>

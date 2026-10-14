@@ -16,9 +16,9 @@ export const en = {
   about: {
     title: 'Who I am',
     p1: "I'm Jorge Perigüell Rubio — yes, with the umlaut — from Xàtiva (Valencia). I'm specializing in backend and applied AI, and I bring something unusual for a developer: almost eight years as a records manager. I know which metadata matter, which errors are serious, and when a model's output can't be trusted.",
-    p2Title: "<i>My main <span>motivation</span>?</i><br />",
+    p2Title: '<i>My main <span>motivation</span>?</i><br />',
     p2: "CREATING. I'm passionate about discovering how technology can turn ideas into useful, accessible realities. I'm especially drawn to its potential for improving people's daily lives, streamlining processes, and opening new forms of expression and connection. For me, programming is the art of combining creativity and logic to build solutions with real impact.",
-    p3Title: "<i>My <span>background</span>?</i><br />",
+    p3Title: '<i>My <span>background</span>?</i><br />',
     p3: "I hold a degree in History from the Universitat de València and a Master's in Cultural Management. For almost eight years I worked as an archive assistant at the Arxiu Municipal de Xàtiva (Xàtiva Municipal Archive) through Solventa SL: cataloguing with ISAD(G), digitization, processing historical records, and handling administrative procedures. That experience is the foundation I now use to evaluate what AI extracts from a document.",
   },
   goals: {
@@ -51,7 +51,8 @@ export const en = {
       ' A skill that guides you through the step-by-step understanding of a program, service, or repository, generating a pedagogical path with documentation, diagrams, checklists, and executable scripts with mocked data.',
     onboardProgramAlt: 'Image of the onboarding skill',
     ragTitle: 'Portfolio Contact & Chatbot',
-    ragTagline: 'A chatbot that answers questions about me in 3 languages and never makes things up',
+    ragTagline:
+      'A chatbot that answers questions about me in 3 languages and never makes things up',
     ragDesc:
       "Email contact service and a chatbot that answers questions about my profile. It's live in production on this very site. It includes a guardrail that blocks abuse and prompt injection, an evaluator that reviews each answer, and a similarity threshold that discards irrelevant context.",
     ragAlt: 'Image of a talking CV with a mouth',
@@ -99,6 +100,8 @@ export const en = {
     buttonUp: 'Header',
   },
   chat: {
+    welcome:
+      "Hi! I'm an AI focused on Jorge: I answer using the information in his profile. Ask me about my education, experience, skills or projects.",
     open: 'Chat with me',
     openAria: 'Open chat',
     title: 'Chat',
